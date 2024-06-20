@@ -85,17 +85,12 @@ if(ch == 10):
     t.sleep(1)
 #cor = data.corr()
 #print(cor)
-data = data.drop("gender", axis=1)
-data = data.drop("StageID", axis=1)
-data = data.drop("GradeID", axis=1)
-data = data.drop("NationalITy", axis=1)
-data = data.drop("PlaceofBirth", axis=1)
-data = data.drop("SectionID", axis=1)
-data = data.drop("Topic", axis=1)
-data = data.drop("Semester", axis=1)
-data = data.drop("Relation", axis=1)
-data = data.drop("ParentschoolSatisfaction", axis=1)
-data = data.drop("ParentAnsweringSurvey", axis=1)
+#data.drop(["gender", "StageID", "GradeID", "NationalITy", "PlaceofBirth", 
+           #"SectionID", "Topic", "Semester", "Relation", "ParentschoolSatisfaction", 
+           #"ParentAnsweringSurvey", "AnnouncementsView"], axis=1, inplace=True)
+data.drop(["gender","stageID","GradeID","NationalITy", "PlaceofBirth", 
+           "SectionID", "Topic", "Semester", "Relation", "ParentschoolSatisfaction", 
+           "ParentAnsweringSurvey", "AnnouncementsView"], axis=1, inplace=True)
 #data = data.drop("VisITedResources", axis=1)
 data = data.drop("AnnouncementsView", axis=1)
 u.shuffle(data)
